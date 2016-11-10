@@ -22,6 +22,11 @@ public class Zahlen implements IZahlen{
 		this.zahlen = new ArrayList<Double>();
 	}
 	
+	/**
+	 * Get Methode für die Arraylist Zahlen
+	 * @param index ist die Stelle an dem das Element ausgegeben werden kann
+	 * @return das Element an der Stelle index
+	 */
 	public double getZahlen(int index) {
 		return zahlen.get(index);
 	}
