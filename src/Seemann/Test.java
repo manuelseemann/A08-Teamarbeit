@@ -20,16 +20,30 @@ public class Test {
 		z.add(11);
 		z.add(12);
 		z.add(13);
-		System.out.println(z.getSumme());
+		System.out.println("Summe: "+z.getSumme());
+		System.out.println("Maximum: "+z.getMaximum());
+		System.out.println("Minimum: "+z.getMinimum());
+		
 		
 		//----------------------------
 		
 		Flaeche f = new Flaeche("Kreis");
-		f.add(1);
 		f.add(2);
-		f.add(3);
-		f.add(4);
-		System.out.println(f.getFlaeche());
+
+		System.out.println("Kreis: "+f.getFlaeche());
+		
+		Flaeche f1 = new Flaeche("Dreieck");
+		f1.add(2);
+		f1.add(3);
+		f1.add(4);
+
+		System.out.println("Dreieck: "+f1.getFlaeche());
+		
+		Flaeche f2 = new Flaeche("Rechteck");
+		f2.add(2);
+		f2.add(3);
+
+		System.out.println("Rechteck: "+f2.getFlaeche());
 		
 	}
 }
