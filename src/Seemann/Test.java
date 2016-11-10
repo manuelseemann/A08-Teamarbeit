@@ -1,5 +1,9 @@
 package Seemann;
-
+/**
+ * 
+ * @author Manuel
+ *
+ */
 public class Test {
 	public static void main(String[] args){
 		Flaeche kreis = new Flaeche(5, 0, 0);
