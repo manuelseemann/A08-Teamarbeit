@@ -27,19 +27,21 @@ public class Test {
 		
 		//----------------------------
 		
-		Flaeche f = new Flaeche("Kreis");
+		Flaeche f = new Flaeche();
 		f.add(2);
 
 		System.out.println("Kreis: "+f.getFlaeche());
+		f.add(2);
+		System.out.println("Rechteck: "+f.getFlaeche());
 		
-		Flaeche f1 = new Flaeche("Dreieck");
+		Flaeche f1 = new Flaeche();
 		f1.add(2);
 		f1.add(3);
 		f1.add(4);
 
 		System.out.println("Dreieck: "+f1.getFlaeche());
 		
-		Flaeche f2 = new Flaeche("Rechteck");
+		Flaeche f2 = new Flaeche();
 		f2.add(2);
 		f2.add(3);
 

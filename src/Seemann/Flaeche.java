@@ -23,29 +23,40 @@ public class Flaeche extends Zahlen implements IFlaeche{
 	 * @param c Seite c bei Dreieck, 0 bei Rechteck und Kreis 
 	 * @throws InvalidInputException 
 	 */
-	public Flaeche(String form){
+	public Flaeche(){
 		super();
-		this.form = form;
+		//this.form = form;
 	}
 	
 	/**
 	 * Methode getFlaeche, berechnet und returnt die Fläche der Figur
 	 * 
-	 * @return double Wert mit Flächeninhalt der erstellten Figur
+	 * @return double Wert mit Flächeninhalt der erstellten Figur, bei Fehler 0
 	 */
 	public double getFlaeche(){
-		if(this.form.equals("Rechteck")){
+		int size = super.getSize();
+		
+		//Nichts geaddet
+		if(size==0){
+			System.out.println("Sie haben keine Zahlen geaddet");
+			return 0;
+		}
+		
+		//Rechteck
+		if(size==2){
 			this.a = super.getZahlen(0);
 			this.b = super.getZahlen(1);
 			return (this.a*this.b);
 		}
 		
-		if(this.form.equals("Kreis")){
+		//Kreis
+		if(size==1){
 			this.r = super.getZahlen(0);
 			return this.r*this.r*Math.PI;
 		}
 		
-		if(this.form.equals("Dreieck")){
+		//Dreieck
+		if(size>=3){
 			this.a = super.getZahlen(0);
 			this.b = super.getZahlen(1);
 			this.c = super.getZahlen(2);
