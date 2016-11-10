@@ -8,7 +8,7 @@ import java.lang.Math;
 * @author Paul Mazzolini
 * @version 2016-11-10
 */
-public class Flaeche implements IFlaeche{
+public class Flaeche extends Zahlen implements IFlaeche{
 	private String form; //Welches geometrische Object
 	private double r; //Radius
 	private double a; //a Seite
@@ -23,56 +23,9 @@ public class Flaeche implements IFlaeche{
 	 * @param c Seite c bei Dreieck, 0 bei Rechteck und Kreis 
 	 * @throws InvalidInputException 
 	 */
-	public Flaeche(double ar, double b, double c){
-		this.form = "";
-		this.r = 0;
-		this.a = 0;
-		this.b = 0;
-		this.c = 0;
-		
-		if((a!=0)&&(b==0)&&(c==0)){
-			this.form = "Kreis";
-			this.r = ar;
-		}
-		if((a==0)&&(b!=0)&&(c==0)){
-			this.form = "Kreis";
-			this.r = b;
-		}
-		if((a==0)&&(b==0)&&(c!=0)){
-			this.form = "Kreis";
-			this.r = c;
-		}
-		
-		if((a!=0)&&(b!=0)&&(c==0)){
-			this.form = "Rechteck";
-			this.a = ar;
-			this.b = b;
-		}
-		if((a==0)&&(b!=0)&&(c!=0)){
-			this.form = "Rechteck";
-			this.a = b;
-			this.b = c;
-		}
-		if((a!=0)&&(b==0)&&(c!=0)){
-			this.form = "Rechteck";
-			this.a = ar;
-			this.b = c;
-		}
-		
-		if((a!=0)&&(b!=0)&&(c!=0)){
-			this.form = "Dreieck";
-			this.a = ar;
-			this.b = b;
-			this.c = c;
-		}
-		
-		/*if(!((form.equals("Rechteck"))||(form.equals("Kreis"))||(form.equals("Dreieck")))){
-			//System.out.println("Die Angabe der Form war inkorrekt");
-			this.form = "";
-			this.a = 0;
-			this.b = 0;
-			this.c = 0;
-		}*/
+	public Flaeche(String form){
+		super();
+		this.form = form;
 	}
 	
 	/**
@@ -82,14 +35,20 @@ public class Flaeche implements IFlaeche{
 	 */
 	public double getFlaeche(){
 		if(this.form.equals("Rechteck")){
+			this.a = super.getZahlen(0);
+			this.b = super.getZahlen(1);
 			return (this.a*this.b);
 		}
 		
 		if(this.form.equals("Kreis")){
+			this.r = super.getZahlen(0);
 			return this.r*this.r*Math.PI;
 		}
 		
 		if(this.form.equals("Dreieck")){
+			this.a = super.getZahlen(0);
+			this.b = super.getZahlen(1);
+			this.c = super.getZahlen(2);
 			double s = (this.a+this.b+this.c)/2;
 			return Math.sqrt(s*(s-this.a)*(s-this.b)*(s-this.c));
 		}

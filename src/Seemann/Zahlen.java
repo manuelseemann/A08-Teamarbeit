@@ -21,7 +21,11 @@ public class Zahlen implements IZahlen{
 	public Zahlen(){
 		this.zahlen = new ArrayList<Double>();
 	}
-
+	
+	public double getZahlen(int index) {
+		return zahlen.get(index);
+	}
+	
 	/**
 	 * Diese Methode gibt die Summe der Elemente der Arraylist zurück.
 	 * @return die Summe der Elemente der Arraylist
