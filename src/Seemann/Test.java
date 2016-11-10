@@ -1,20 +1,20 @@
 package Seemann;
+/**
+ * Die Klasse Test testet die Methoden aus Zahlen, Flaeche und Rauminhalt
+ * 
+ * @author SEEMANN Manuel
+ * @version 2016-11-10
+ */
 
 public class Test {
+	/**
+	 * Methode main ruft alle Klassen auf und gibt die Ergebnisse aus
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args){
-		/*Flaeche kreis = new Flaeche(5, 0, 0);
-		Flaeche rechteck = new Flaeche(4, 4, 0);
-		Flaeche dreieck = new Flaeche(2, 2, 2);
-		
-		System.out.println(kreis.getFlaeche());
-		System.out.println(dreieck.getFlaeche());
-		System.out.println(rechteck.getFlaeche());
-		
-		Flaeche x = new Flaeche(0, 5, 0);
-		System.out.println(x.getFlaeche());
-		
-		Flaeche y = new Flaeche(0, 0, 0);
-		System.out.println(y.getFlaeche());*/
+
+		//Test der Klasse Zahlen Summe, Maximum und Minimum
 		Zahlen z = new Zahlen();
 		z.add(10);
 		z.add(11);
@@ -25,27 +25,24 @@ public class Test {
 		System.out.println("Minimum: "+z.getMinimum());
 		
 		
-		//----------------------------
+		//Test der Klasse Flaeche Kreis, Dreieck und Rechteck
+		Flaeche kreis = new Flaeche();
+		kreis.add(2);
+		System.out.println("Kreis: "+kreis.getFlaeche());
 		
-		Flaeche f = new Flaeche();
-		f.add(2);
-
-		System.out.println("Kreis: "+f.getFlaeche());
-		f.add(2);
-		System.out.println("Rechteck: "+f.getFlaeche());
 		
-		Flaeche f1 = new Flaeche();
-		f1.add(2);
-		f1.add(3);
-		f1.add(4);
+		Flaeche dreieck = new Flaeche();
+		dreieck.add(2);
+		dreieck.add(3);
+		dreieck.add(4);
 
-		System.out.println("Dreieck: "+f1.getFlaeche());
+		System.out.println("Dreieck: "+dreieck.getFlaeche());
 		
-		Flaeche f2 = new Flaeche();
-		f2.add(2);
-		f2.add(3);
+		Flaeche rechteck = new Flaeche();
+		rechteck.add(2);
+		rechteck.add(3);
 
-		System.out.println("Rechteck: "+f2.getFlaeche());
+		System.out.println("Rechteck: "+rechteck.getFlaeche());
 		
 	}
 }
