@@ -5,6 +5,8 @@ import java.lang.Math;
 /**
 * Klasse Flaeche, zur Berechnung der Flächen von Rechtecken, Kreisen und Dreiecken
 * 
+* 
+* 
 * @author Paul Mazzolini
 * @version 2016-11-10
 */
