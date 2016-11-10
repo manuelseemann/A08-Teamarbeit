@@ -97,4 +97,3 @@ public class Flaeche implements IFlaeche{
 		return 0;
 	}
 }
-
