@@ -69,6 +69,13 @@ public class Zahlen implements IZahlen{
 	@Override
 	public void add(double value) {
 		this.zahlen.add(value);
-		
+	}
+	
+	/**
+	 * Diese Methode gibt die Größe der Arraylist zurück
+	 * @return die Länge
+	 */
+	public int getSize(){
+		return this.zahlen.size();
 	}
 }
