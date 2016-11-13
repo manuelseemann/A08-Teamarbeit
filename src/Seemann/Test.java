@@ -44,5 +44,27 @@ public class Test {
 
 		System.out.println("Rechteck: "+rechteck.getFlaeche());
 		
+		//Test der Klasse RaumInhalt Zylinder, Quader und Prisma
+		RaumInhalt zylinder = new RaumInhalt();
+		zylinder.add(2);
+		zylinder.add(3);
+		System.out.println("Zylinder: "+zylinder.getFlaeche());
+		
+		
+		RaumInhalt quader = new RaumInhalt();
+		quader.add(2);
+		quader.add(3);
+		quader.add(4);
+
+		System.out.println("Quader: "+quader.getFlaeche());
+		
+		RaumInhalt prisma = new RaumInhalt();
+		prisma.add(2);
+		prisma.add(3);
+		prisma.add(4);
+		prisma.add(5);
+
+		System.out.println("Prisma: "+prisma.getFlaeche());
+		
 	}
 }
