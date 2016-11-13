@@ -1,7 +1,7 @@
 package Seemann;
 
 /**
-* Interface Flaeche
+* Interface für Flaeche
 * 
 * @author Paul Mazzolini
 * @version 2016-11-10

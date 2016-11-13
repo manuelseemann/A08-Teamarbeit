@@ -22,7 +22,7 @@ public class Flaeche extends Zahlen implements IFlaeche{
 	}
 	
 	/**
-	 * Methode getFlaeche, berechnet und returnt die Fläche der Figur
+	 * Methode getFlaeche, berechnet und returnt die Fläche der Figur, je nach dem wie viele Werte geaddet wurden
 	 * 
 	 * @return double Wert mit Flächeninhalt der erstellten Figur, bei Fehler 0.0
 	 */
@@ -35,7 +35,7 @@ public class Flaeche extends Zahlen implements IFlaeche{
 			return 0;
 		}
 		
-		//Kreis, bei 1 Angaben
+		//Kreis, bei 1 Angabe
 		if(size==1){
 			this.r = super.getZahlen(0);
 			return this.r*this.r*Math.PI;
