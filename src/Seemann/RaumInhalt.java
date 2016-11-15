@@ -1,5 +1,7 @@
 package Seemann;
 
+import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
+
 public class RaumInhalt extends Flaeche implements IRaumInhalt{
 
 	private double h;
@@ -44,15 +46,23 @@ public class RaumInhalt extends Flaeche implements IRaumInhalt{
 					this.getZahlen().clear();
 					this.add(this.getA());
 					this.add(this.getB());
+					System.out.println(this.h);
 					System.out.println(this.getFlaeche());
-					return Math.sqrt(h*this.getFlaeche());
+					return h*this.getFlaeche();
 				}
 				
 				//Prisma
 				if(size>=4){
 					this.h = super.getZahlen(0);
+					this.setA(super.getZahlen(1));
+					this.setB(super.getZahlen(2));
+					this.setC(super.getZahlen(3));
+					this.getZahlen().clear();
+					this.add(this.getA());
+					this.add(this.getB());
+					this.add(this.getC());
 					System.out.println(this.getFlaeche());
-					return Math.sqrt(h*this.getFlaeche());
+					return h*this.getFlaeche();
 				}
 				System.out.println(flaeche);
 				return 0;

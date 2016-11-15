@@ -54,5 +54,12 @@ public class Test {
 		quader.add(2);
 		quader.add(2);
 		System.out.println("Quader: "+quader.getRaumInhalt());
+		
+		RaumInhalt prisma = new RaumInhalt();
+		prisma.add(2);
+		prisma.add(5);
+		prisma.add(8);
+		prisma.add(12);
+		System.out.println("Prisma: "+prisma.getRaumInhalt());
 	}
 }
