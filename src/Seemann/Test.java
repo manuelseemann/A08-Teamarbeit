@@ -44,6 +44,7 @@ public class Test {
 
 		System.out.println("Rechteck: "+rechteck.getFlaeche());
 		
+
 		RaumInhalt zylinder = new RaumInhalt();
 		zylinder.add(2);
 		zylinder.add(2);
@@ -61,5 +62,8 @@ public class Test {
 		prisma.add(8);
 		prisma.add(12);
 		System.out.println("Prisma: "+prisma.getRaumInhalt());
+
+		
+		
 	}
 }
