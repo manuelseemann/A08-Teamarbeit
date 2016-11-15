@@ -44,5 +44,15 @@ public class Test {
 
 		System.out.println("Rechteck: "+rechteck.getFlaeche());
 		
+		RaumInhalt zylinder = new RaumInhalt();
+		zylinder.add(2);
+		zylinder.add(2);
+		System.out.println("Zylinder: "+zylinder.getRaumInhalt());
+		
+		RaumInhalt quader = new RaumInhalt();
+		quader.add(8);
+		quader.add(2);
+		quader.add(2);
+		System.out.println("Quader: "+quader.getRaumInhalt());
 	}
 }

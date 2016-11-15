@@ -19,7 +19,7 @@ public class Zahlen implements IZahlen{
 	 * Konstruktor
 	 */
 	public Zahlen(){
-		this.zahlen = new ArrayList<Double>();
+		this.setZahlen(new ArrayList<Double>());
 	}
 	
 	/**
@@ -38,8 +38,8 @@ public class Zahlen implements IZahlen{
 	@Override
 	public double getSumme() {
 		double summe = 0;
-		for(int i = 0; i < this.zahlen.size(); i++){
-			summe += this.zahlen.get(i);
+		for(int i = 0; i < this.getZahlen().size(); i++){
+			summe += this.getZahlen().get(i);
 		}
 		return summe;
 	}
@@ -50,7 +50,7 @@ public class Zahlen implements IZahlen{
 	 */
 	@Override
 	public double getMinimum() {
-		return Collections.min(this.zahlen);
+		return Collections.min(this.getZahlen());
 	}
 
 	/**
@@ -59,7 +59,7 @@ public class Zahlen implements IZahlen{
 	 */
 	@Override
 	public double getMaximum() {
-		return Collections.max(this.zahlen);
+		return Collections.max(this.getZahlen());
 	}
 
 	/**
@@ -68,7 +68,7 @@ public class Zahlen implements IZahlen{
 	 */
 	@Override
 	public void add(double value) {
-		this.zahlen.add(value);
+		this.getZahlen().add(value);
 	}
 	
 	/**
@@ -76,6 +76,21 @@ public class Zahlen implements IZahlen{
 	 * @return die Länge
 	 */
 	public int getSize(){
-		return this.zahlen.size();
+		return this.getZahlen().size();
 	}
+
+	/**
+	 * @return the zahlen
+	 */
+	public ArrayList<Double> getZahlen() {
+		return zahlen;
+	}
+
+	/**
+	 * @param zahlen the zahlen to set
+	 */
+	public void setZahlen(ArrayList<Double> zahlen) {
+		this.zahlen = zahlen;
+	}
+	
 }

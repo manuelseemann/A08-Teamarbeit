@@ -7,6 +7,7 @@ public class RaumInhalt extends Flaeche implements IRaumInhalt{
 	
 	
 	
+	
 	public RaumInhalt(){
 		super();
 		
@@ -27,6 +28,9 @@ public class RaumInhalt extends Flaeche implements IRaumInhalt{
 				//Zylinder
 				if(size==2){
 					this.h = super.getZahlen(0);
+					this.setR(super.getZahlen(1));
+					this.getZahlen().clear();
+					this.add(this.getR());
 					System.out.println(this.getFlaeche());
 					return (this.h*this.getFlaeche());
 				}
@@ -35,6 +39,11 @@ public class RaumInhalt extends Flaeche implements IRaumInhalt{
 				//Quader
 				if(size==3){
 					this.h = super.getZahlen(0);
+					this.setA(super.getZahlen(1));
+					this.setB(super.getZahlen(2));
+					this.getZahlen().clear();
+					this.add(this.getA());
+					this.add(this.getB());
 					System.out.println(this.getFlaeche());
 					return Math.sqrt(h*this.getFlaeche());
 				}
