@@ -27,23 +27,23 @@ public class RaumInhalt extends Flaeche implements IRaumInhalt{
 				//Zylinder
 				if(size==2){
 					this.h = super.getZahlen(0);
-					System.out.println(flaeche);
-					return (this.h*flaeche);
+					System.out.println(this.getFlaeche());
+					return (this.h*this.getFlaeche());
 				}
 				
 				
 				//Quader
 				if(size==3){
 					this.h = super.getZahlen(0);
-					System.out.println(flaeche);
-					return Math.sqrt(h*flaeche);
+					System.out.println(this.getFlaeche());
+					return Math.sqrt(h*this.getFlaeche());
 				}
 				
 				//Prisma
 				if(size>=4){
 					this.h = super.getZahlen(0);
-					System.out.println(flaeche);
-					return Math.sqrt(h*flaeche);
+					System.out.println(this.getFlaeche());
+					return Math.sqrt(h*this.getFlaeche());
 				}
 				System.out.println(flaeche);
 				return 0;
