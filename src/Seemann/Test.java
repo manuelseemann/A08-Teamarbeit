@@ -3,7 +3,7 @@ package Seemann;
  * Die Klasse Test testet die Methoden aus Zahlen, Flaeche und Rauminhalt
  * 
  * @author SEEMANN Manuel
- * @version 2016-10-15
+ * @version 2016-11-15
  */
 
 public class Test {
@@ -62,8 +62,5 @@ public class Test {
 		prisma.add(8);
 		prisma.add(12);
 		System.out.println("Prisma: "+prisma.getRaumInhalt());
-
-		
-		
 	}
 }
